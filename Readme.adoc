@@ -1,60 +1,63 @@
-= anynines.com home page
+= Anynines.com home page
+:linkattrs:
+:linkcss:
+:toc: right
+:toc-title: Document Index
+:icons: font
+:source-highlighter: coderay
+:docslink: http://anynines.com/[Anynines.com Landing Page Documentation]
+:description: Documentation to describe how to use this project.
+:doctitle: README.adoc
 
-This is a text document formatted in the asciidoctor style of syntax. Links to URL pages within the anynines.com site are as follows:
+This is a text document formatted in the `asciidoctor` style of syntax. 
 
-http://www.anynines.com/home[anynines.com]
+== Purpose 
 
-== About
+*index.html* is a website landing page for the http://anynines.com[Anynines] PaaS provider. 
 
-http://www.anynines.com/faq[FAQ]
-http://www.anynines.com/team[Team]
-http://www.anynines.com/about[Company]
-http://www.anynines.com/security[Security]
-http://www.anynines.com/privacy[Privacy]
-http://www.anynines.com/stack[The Stack]
+''''
 
-== Blog
+== Build Tool
 
-http://blog.anynines.com/[Blog here]
+This project is designed to use the *Gradle* build tool. So the folder structure reflects the build tool expectations.
 
-== Docs
 
-https://support.anynines.com/forums[Forum]
-https://support.anynines.com/home[Customer Service]
-https://support.anynines.com/anonymous_requests/new[Requests]
-https://customerpanel.de.a9sapp.eu/sessions/new[Customer Control Panel]
+There is also a tiny wrapper of tools that allow you to build and run *gradle* without installing that tool. As a trial to confirm everything is correctly
+installed, open a terminal command session. Then change directories in the root of this project. Then try a command like:
 
-== Pricing
+[source,bash]
+----
+./gradlew check
+----
 
-http://www.anynines.com/pricing[Build Your Own]
+''''
 
-== Help
+NOTE: An active internet session is required as is a java runtime environment of JDK7 or more recent.
 
-http://status.anynines.com/[Status]
-https://support.anynines.com/home[Support]
+''''
 
-== Enterprise
+First time execution (only) will force *Gradle* to download several dependencies from the internet. This is to support build script logic and speed things up after the first run.
 
-http://enterprise.anynines.com/[The Facts]
+''''
 
-== Jobs
+== Provided Scripts
+  
+Three build scripts are included and these scripts have the .gradle file suffix. Their name and purpose are :
 
-http://www.anynines.com/jobs[Work with Us]
+ . *build.gradle* - primary tasks needed to build this project
+ . *gretty.gradle* - support tasks that allow you to see how this project looks before deployment to a CloudFoundry platform. It is not needed for deployment, only as a convenience. 
+It runs a local web server using the *.WAR* file from the prior step. Open a web browser like firefox and enter address `localhost:8080` to see what will be available to users once this *.WAR* is deployed.
+ . *deploy.gradle* - this script copies a *.WAR* file up to your CloudFoundry account. You will need to have joined http://anynines.com[anynines.com] or another CloudFoundry provider. Your username and password credentials must be entered into the script.
+Also change the _application_ and _uri_ variables to use your own application name in place of *anynines*.
 
-== Log In
+.Typical Execution Sequence 
+[source,bash]
+---- 
+ gradlew 
+ gradlew -b gretty.gradle appRun
+ gradlew -b deploy.gradle
+----
 
-https://customerpanel.de.a9sapp.eu/[Sign In Here]
-http://www.anynines.com/tos[Terms of service]
-http://www.anynines.com/imprint[Company Info]
+''''
 
-http://www.avarteq.com/home[Avarteq GmbH]
-http://www.avarteq.com/contact[Contact Us]
-
-== Social Media
-
-https://twitter.com/avarteq[Twitter]
-https://www.facebook.com/Avarteq/[FaceBook]
-https://plus.google.com/+AvarteqDe/posts[Google+]
-https://github.com/avarteqgmbh[GitHub]
-https://github.com/anynines[GitHub Anynines]
-
+NOTE: In fact, you do not need gradle, this project structure, wrapper or any other pieces. Only the folders and files within the `./webapp` folder form the `index.html` landing page. 

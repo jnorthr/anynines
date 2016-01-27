@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 1.5.2">
+<meta name="description" content="Documentation to describe how to use this project.">
+<title>README.adoc</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./coderay-asciidoctor.css">
+</head>
+<body class="article toc2 toc-right">
+<div id="header">
+<h1>README.adoc</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Document Index</div>
+<ul class="sectlevel1">
+<li><a href="#_purpose">Purpose</a></li>
+<li><a href="#_build_tool">Build Tool</a></li>
+<li><a href="#_provided_scripts">Provided Scripts</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is a text document formatted in the <code>asciidoctor</code> style of syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_purpose">Purpose</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>index.html</strong> is a website landing page for the <a href="http://anynines.com">Anynines</a> PaaS provider.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_build_tool">Build Tool</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This project is designed to use the <strong>Gradle</strong> build tool. So the folder structure reflects the build tool expectations.</p>
+</div>
+<div class="paragraph">
+<p>There is also a tiny wrapper of tools that allow you to build and run <strong>gradle</strong> without installing that tool. As a trial to confirm everything is correctly
+installed, open a terminal command session. Then change directories in the root of this project. Then try a command like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">./gradlew check</code></pre>
+</div>
+</div>
+<hr>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+An active internet session is required as is a java runtime environment of JDK7 or more recent.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+<div class="paragraph">
+<p>First time execution (only) will force <strong>Gradle</strong> to download several dependencies from the internet. This is to support build script logic and speed things up after the first run.</p>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_provided_scripts">Provided Scripts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Three build scripts are included and these scripts have the .gradle file suffix. Their name and purpose are :</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>build.gradle</strong> - primary tasks needed to build this project</p>
+</li>
+<li>
+<p><strong>gretty.gradle</strong> - support tasks that allow you to see how this project looks before deployment to a CloudFoundry platform. It is not needed for deployment, only as a convenience.
+It runs a local web server using the <strong>.WAR</strong> file from the prior step. Open a web browser like firefox and enter address <code>localhost:8080</code> to see what will be available to users once this <strong>.WAR</strong> is deployed.</p>
+</li>
+<li>
+<p><strong>deploy.gradle</strong> - this script copies a <strong>.WAR</strong> file up to your CloudFoundry account. You will need to have joined <a href="http://anynines.com">anynines.com</a> or another CloudFoundry provider. Your username and password credentials must be entered into the script.
+Also change the <em>application</em> and <em>uri</em> variables to use your own application name in place of <strong>anynines</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="listingblock">
+<div class="title">Typical Execution Sequence</div>
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash"> gradlew
+ gradlew -b gretty.gradle appRun
+ gradlew -b deploy.gradle</code></pre>
+</div>
+</div>
+<hr>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In fact, you do not need gradle, this project structure, wrapper or any other pieces. Only the folders and files within the <code>./webapp</code> folder form the <code>index.html</code> landing page.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2016-01-27 17:51:52 CET
+</div>
+</div>
+</body>
+</html>
