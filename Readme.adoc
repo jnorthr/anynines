@@ -1,0 +1,60 @@
+= anynines.com home page
+
+This is a text document formatted in the asciidoctor style of syntax. Links to URL pages within the anynines.com site are as follows:
+
+http://www.anynines.com/home[anynines.com]
+
+== About
+
+http://www.anynines.com/faq[FAQ]
+http://www.anynines.com/team[Team]
+http://www.anynines.com/about[Company]
+http://www.anynines.com/security[Security]
+http://www.anynines.com/privacy[Privacy]
+http://www.anynines.com/stack[The Stack]
+
+== Blog
+
+http://blog.anynines.com/[Blog here]
+
+== Docs
+
+https://support.anynines.com/forums[Forum]
+https://support.anynines.com/home[Customer Service]
+https://support.anynines.com/anonymous_requests/new[Requests]
+https://customerpanel.de.a9sapp.eu/sessions/new[Customer Control Panel]
+
+== Pricing
+
+http://www.anynines.com/pricing[Build Your Own]
+
+== Help
+
+http://status.anynines.com/[Status]
+https://support.anynines.com/home[Support]
+
+== Enterprise
+
+http://enterprise.anynines.com/[The Facts]
+
+== Jobs
+
+http://www.anynines.com/jobs[Work with Us]
+
+== Log In
+
+https://customerpanel.de.a9sapp.eu/[Sign In Here]
+http://www.anynines.com/tos[Terms of service]
+http://www.anynines.com/imprint[Company Info]
+
+http://www.avarteq.com/home[Avarteq GmbH]
+http://www.avarteq.com/contact[Contact Us]
+
+== Social Media
+
+https://twitter.com/avarteq[Twitter]
+https://www.facebook.com/Avarteq/[FaceBook]
+https://plus.google.com/+AvarteqDe/posts[Google+]
+https://github.com/avarteqgmbh[GitHub]
+https://github.com/anynines[GitHub Anynines]
+
