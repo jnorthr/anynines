@@ -12,6 +12,8 @@
  Use this gradle script syntax to automatically deploy using defaultTasks ('cd' into this folder then from a terminal type):
  cd /Users/jnorthr/Dropbox/Projects/anynines/Website
  ./gradlew -b deploy.gradle 
+ // to avoid credentials in this script, username+password can go in ~/gradle.properties so read 
+ // https://docs.cloudfoundry.org/buildpacks/java/build-tool-int.html#gradle-additional. For How-To.
 
  Use this script syntax to manually deploy ('cd' into this folder then from a terminal type):
  cd /Users/jnorthr/Dropbox/Projects/anynines/Website
