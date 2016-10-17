@@ -1,8 +1,6 @@
 /*
- Website - deploy to CloudFoundry PaaS Service provider named anynines.com @ http://anynines.de.a9sapp.eu
+ Website - deploy to CloudFoundry PaaS Service provider named anynines.com @ target api: https://api.aws.ie.a9s.eu 
  
- See: http://cloudnines.de.a9sapp.eu/ for tutorial on how to use this Cloud
-
  To manually deploy this site using the CF command-line tool - :
  cd /Users/jnorthr/Dropbox/Projects/anynines/Website
  cf push anynines -b https://github.com/cloudfoundry/java-buildpack.git -p build/libs/Website.war
@@ -62,10 +60,10 @@ cloudfoundry {
 	// your credentials go here
     username = ''       // credentials used to join your CloudFoundry provider
     password = ''
-    target = 'https://api.de.a9s.eu'  			// cloud foundry target address for your choice of providers; this address is for anynines.com
+    target = 'https://api.aws.ie.a9s.eu' // cloud foundry target address for your choice of providers; this address is for anynines.com
     space = 'development'
 	file = new File('build/libs/Website.war')   // if you rename the root folder from Website then your .war filename must reflect that
-    uri = 'http://anynines.de.a9sapp.eu/'       // if you choose another name for this site when deployed, put that new name here and in the application value below
+    uri = 'http://anynines.aws.ie.a9s.eu/'       // if you choose another name for this site when deployed, put that new name here and in the application value below
 	application = 'anynines'					// make this same as uri bit
     memory = 280	// MB - varys depending on vendor
     instances = 1
