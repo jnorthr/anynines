@@ -1,0 +1,90 @@
+= Upload Tutorial For Anynines
+Jim Northrop <james.northrop@orange.fr>; Anynines <helpdesk@anynines.com>
+v1.0, 2014-03-20: First draft
+:iconsdir: ../../images/icons
+:description: This tutorial guide will show you how to deploy an application to the PaaS service offered by www.anynines.com
+:keywords: guide,tutorial,quick,start, reference,paas,any,nines,anynines,upload,tut
+:language: html
+:linkattrs:
+:toc: right
+:sectlinks:
+
+
+== Your Upload Tutorial
+
+=== Introduction
+
+To make use of the princles of cloud computing, it's vital to be able to deploy business applications to a cloud computing service. These applications typically let our customers conduct business with us. The services we provide to them can be built on a layer of technologies that are based on standards used by the industry. 
+
+Such solutions as the http://cloudfoundry.org/index.html[Cloud Foundry Platform-As-A-Service (PaaS)], offer a standard set of features, services and attachment points. http://www.anynines.com[Anynines] offers you and your clients this solutuion. 
+
+NOTE: We assume you've reviewed available technologies and found http://cloudfoundry.org/index.html[Cloud Foundry] to be a good choice. 
+
+
+=== Purpose
+
+This overview has step-by-step instructions on how to deploy an application to http://www.anynines.com[Anynines]. The programming languages and tools we've used in our samples are publicly available and open source products that incur no fees or charges. In these examples, no programming languages are used. You'll need those after you become familiar with Anynines. Consult our http://www.anynines.com[Anynines Home Page] for more details.
+
+
+WARNING: To complete the other tasks in this tutorial, you must hold a current http://www.anynines.com[Anynines] account.
+
+
+TIP: This is a tip  to see how they look !
+
+IMPORTANT: Hey man, this is *Important* !
+
+CAUTION: Be ware of this - caution
+
+
+=== What You Need
+
+* Have a membership account with Anynines. Follow our link:/signup[Sign Up] tutorial if you need to join us.
+* Have the email address and password of your Anynines membership.
+* Have a working internet connection.
+* Have and know how to use a text editor.
+* Have downloaded either ( or both of ) our sample war file or the full zip file from our download page.
+
+
+== Your Choice
+
+We've decided to break this tutorial into two pieces. You can follow either trail you choose. They both lead to the same destination : A Successfully Running App on Anynines. Use the automated trail for the quickest deployment or choose the manual trail for a deeper understanding.
+
+
+=== The Manual Trail - the CF Deployment Tool
+
+
+Since you want more detail, let's jump to a specific tutorial to give you that. link:/uploadmanual[Click Here]. 
+
+So you've already installed the *CF* command-line tool, then you should take the sample war file ( see above ). (To install the *CF* tool, follow our links on our home page.) It's a file with all the pieces you'll need to successfully deploy an app to Anynines. It doesn't have the extra bits to automate the build/re-build or automatic upload to our anynines servers. If you want to build this app or tinker a bit, you'll need the zip file. Or you can take both :-)
+
+When your browser finishes the download, open the containing folder where your browser put our war file. You can try an upload to anynines from that folder, or you might want to make another folder somewhere else on your system, then copy or move the sample war file to your new folder. After that read our link:/upload[Upload] tutorial.
+
+
+
+
+
+=== The Automated Trail Using A Build Tool 
+
+Since you've chosen the quick trail, let's jump to our specific tutorial about this. link:/uploadauto[Click Here]. 
+
+<<<
+
+== License
+
+....
+Copyright - anynines.com, 2014
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+....
+
+

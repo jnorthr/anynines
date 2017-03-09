@@ -1,0 +1,114 @@
+= Test Page
+Kismet Rainbow Chameleon <kismet@asciidoctor.org>
+v1.0, 2 Feb., 2014: First incarnation
+:keywords: documentation, team, obstacles, journey, victory
+:description: A story chronicling the inexplicable hazards and vicious beasts a + 
+documentation team must surmount and vanquish on their journey to finding an +
+open source project's true power.
+
+
+This journey begins...
+
+== About the Author {author}
+
+You can contact {author} at {email}.
+{firstname} loves to hear from other chroniclers.
+
+P.S. And yes, my middle name really is {middlename}.
+What else would you expect from a member of the Rocky Mountain {lastname} Clan?
+
+{authorinitials}
+
+'''
+
+== {doctitle}
+
+This set of samples below came from http://asciidoctor.org/docs/user-manual/[this document.]
+
+CPU:: The brain of the computer.
+Hard drive:: Permanent storage for operating system and/or user files.
+RAM:: Temporarily stores information the CPU uses during operation.
+Keyboard:: Used to enter text or control items on the screen.
+Mouse:: Used to point to and select items on your computer screen.
+Monitor:: Displays information in visual form using text and graphics.
+
+'''
+
+And this is how the icon:heart[size=2x] displays. icon:shield[rotate=90, flip=vertical] 
+
+
+icon:download[link="http://rubygems.org/downloads/asciidoctor-0.1.3.gem"]
+
+
+== Title two
+
+Now is the time. 
+
+'''
+
+.Steps of an atom
+. Step 1
+. Step 2
+.. Step 2a
+.. Step 2b
+. Step 3
+
+'''
+
+[options=interactive]
+- [*] checked
+- [x] also checked
+- [ ] not checked
+-     normal list item
+
+'''
+
+[square]
+* one
+* two
+* three
+
+
+== Intrinsic Attributes
+
+ Version of the processor: {asciidoctor-version}
+:backend: Backend used to render document
+:docdate: Last modified date
+:docdatetime: Last modified date and time
+:docdir: Name of document directory
+:docfile: Name of document file
+:doctime: Last modified time
+:doctitle: The title of the document
+:doctype: Document’s doctype (e.g., article)
+:localdate: Local date when rendered
+:localdatetime: Local date and time when rendered
+:localtime: Local time when rendered
+
+'''
+
+== 3.5.4
+
+[#free_the_world]*free the world*
+
+[.lead]
+This is the ultimate paragraph.
+
+This is normal text. *Bold text* and _underlined_ text;
++This is a bunch of text within plus signs+
+
+[source,ruby]
+----
+require 'asciidoctor'
+
+puts Asciidoctor.render_file('sample.adoc', :header_footer => true)
+----
+
+'''
+
+== Document Information Follows
+
+{docinfo}
+
+'''
+
+

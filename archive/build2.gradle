@@ -1,0 +1,124 @@
+// asciidoctor build.gradle
+// a sample build script to make content.txt and auto-create an index page from all the converted asciidoc.adoc files
+// needs a lot more code
+
+apply plugin: 'groovy'
+apply plugin: 'asciidoctor'
+apply plugin: GreetingPlugin
+
+defaultTasks  'asciidoctor'  
+
+buildscript {
+  repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/springsource-milestones" }
+    maven { url 'http://dl.bintray.com/content/aalmiray/asciidoctor' }
+    maven{ url 'http://jcenter.bintray.com' }
+  }
+  dependencies {
+    classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+  }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.2.2'
+}
+
+task runScript (dependsOn: 'classes', type: JavaExec) {
+   description 'Copies the resource directory to the target directory.'
+    main = 'hello'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+
+asciidoctor {
+  sourceDir = new File("war/asciidocs")
+  outputDir = new File("war/WEB-INF/pages")
+  options = [
+      icons: 'font',
+    eruby: 'erubis',
+    attributes: [
+      'source-highlighter': 'coderay',
+      toc: 'right',
+      idprefix: '',
+      idseparator: '-'
+    ]
+  ]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion '1.11'
+}
+
+// ---------------------------------
+
+greeting {
+    message = 'Hi'
+    greeter = 'Gradle'
+}
+
+class GreetingPlugin implements Plugin<Project> {
+    void apply(Project project) {
+        project.extensions.create("greeting", GreetingPluginExtension)
+        project.task('hello') << {
+	    target = project.asciidoctor.outputDir
+	    println "------------------\nthe project root folder name is ${project.projectDir}"
+            println "${project.greeting.message} from ${project.greeting.greeter}"
+	    println "the asciidoctor source documents live in folder "+target;
+	    target.eachFileMatch(~/.*\.html$/){ println it.name }
+            //new GroovyShell().run(file('somePath'))
+        }
+    }
+
+} // end of class
+
+
+class GreetingPluginExtension {
+    String message
+    String greeter
+}
+
+
+task transform {
+    println "\n----------------------\nProject Folder:"+project.projectDir;
+    ext.srcDir = file(project.asciidoctor.outputDir)
+    ext.ofn = "${project.asciidoctor.outputDir}/content.txt"
+    ext.destFile = new File(ofn)
+    println "ofn=$ofn"
+    ext.destFile.delete()
+    ext.fnmap = [:]
+
+    ext.srcDir.eachFileMatch(~/.*\.html$/){ fn ->
+		println "\n-------------------------------\nParsing source file:"+fn.name; 
+		def cp = fn.canonicalPath
+   		fn.text.eachLine { ln ->
+			def at = ln.indexOf('<title>');
+			if (at > -1)
+			{
+				def at2 = ln.indexOf('</title>');
+				if (at2 > -1)
+				{
+					def tl = ln.substring(at+7,at2)
+					println "title =|${tl}|"
+					def va = "${tl};${cp}"
+					ext.fnmap[fn.name] = va;
+        		    		//destFile.append("${fn.name} = ${tl};${cp}\n");
+				} // end of if
+
+			} // end of if 
+
+        	}  // end of each
+
+		// dump map
+		ext.fnmap.each{k,v -> println "k=$k"; destFile.append("${k} = ${v}\n"); }
+
+    } // end of each
+
+
+} // end of transform task
+
+

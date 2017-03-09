@@ -1,0 +1,37 @@
+// asciidoctor build.gradle
+apply plugin: 'asciidoctor'
+
+defaultTasks  'asciidoctor'  
+
+buildscript {
+  repositories {
+    mavenCentral()
+    maven { url "https://oss.sonatype.org/content/repositories/springsource-milestones" }
+    maven { url 'http://dl.bintray.com/content/aalmiray/asciidoctor' }
+    maven{ url 'http://jcenter.bintray.com' }
+  }
+  dependencies {
+    classpath 'org.asciidoctor:asciidoctor-gradle-plugin:0.7.0'
+  }
+}
+
+
+
+asciidoctor {
+  sourceDir = new File("war/asciidocs")
+  outputDir = new File("war/WEB-INF/pages")
+  options = [
+    eruby: 'erubis',
+    attributes: [
+      icons: 'font',
+      'source-highlighter': 'coderay',
+      toc: 'right',
+      idprefix: '',
+      idseparator: '-'
+    ]
+  ]
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion '1.11'
+}

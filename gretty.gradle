@@ -1,7 +1,7 @@
 // Gretty uses jetty7 as it only needs jdk1.6 but JDK8/9 may need jetty8 or jetty9 in line 41
 // This gradle script allows us to test the website b4 we bother to upload to PaaS; browser address will be:   localhost:8080
 
-// cd /Users/jim/Dropbox/Project/Website/build/libs 
+// cd /Users/jim/Dropbox/Project/anynines/build/libs 
 // gradlew -b gretty.gradle appRun
 
 apply plugin: 'war'
@@ -29,7 +29,7 @@ repositories {
 
 
 dependencies {
-    compile "org.codehaus.groovy:groovy-all:2.4.5"
+    compile "org.codehaus.groovy:groovy-all:2.4.8"
 	runtime "org.jruby:jruby-complete:1.7.21"
 	runtime "com.beust:jcommander:1.48"
     runtime "org.asciidoctor:asciidoctorj:1.5.3.2"
@@ -45,6 +45,6 @@ gretty {
 }
 
 war {
-  archiveName 'Website.war'
+  archiveName 'anynines.war'
   from 'src/main/resources' // adds a file-set to the root of the archive
 }

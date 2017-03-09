@@ -1,0 +1,129 @@
+= Signup For Anynines
+Jim Northrop <james.northrop@orange.fr>
+v0.1
+:description: This is a guide to join the beta trial period with the PaaS service offered by www.anynines.com
+:keywords: guide,tutorial,quick,start, reference,paas,any,nines,anynines
+:language: html
+:imagesdir: ../images
+:iconsdir: ../images/icons
+:linkattrs:
+:sectlinks: 
+:icons: font
+:toc: right
+:fedpkg: https://apps.fedoraproject.org/packages/asciidoc
+
+== {doctitle}
+
+=== Introduction
+
+Membership of an organization that provides cloud solutions is mandatory. Such solutions as the Cloud Foundry Platform-As-A-Service (PaaS), offer a standard set of features, services and attachment points. Anynines has adopted this solutuion. 
+
+This overview has step-by-step instructions on how to join us.
+
+WARNING: To complete the other tasks in this tutorial, you must hold a current Anynines account.
+
+
+=== Brought To You By
+
+Information about the AsciiDoc package in Fedora is found at {fedpkg}.
+
+[IMPORTANT]
+.Feeding the Werewolves
+====
+While werewolves are hardy community members, keep in mind the following dietary concerns:
+
+. They are allergic to cinnamon.
+. More than two glasses of orange juice in 24 hours makes them howl in harmony with alarms and sirens.
+. Celery makes them sad.
+====
+
+== Start Here
+
+=== Signup to http://www.anynines.com[www.anynines.com, window="_blank"] 
+image:../../images/wwwanyninescom.png[Anynines Home Page, width="780"]
+
+Please visit http://www.anynines.com[www.anynines.com, window="_blank"] to join us. You'll see our page that looks like this.
+
+''''
+
+=== Your Email Address Is Needed
+image:../../images/signup.png[Email Address, width="780"]
+
+Fill in your email address in place of our fictious Martin's address - you do [red yellow-background]*HAVE* an email address don't you ? Then click *SUBMIT*
+
+''''
+
+
+=== Anynines Acknowledges Your Request
+image:../../images/thankyou.png[Anynines Confirmation, width="780"]
+
+Ok, now check your email. You should see a mail message like this. If you don't see it after a few minutes, you might have mis-keyed your email address, so you may need to try again.
+
+''''
+
+
+=== Time To Check Your Mail
+image:../../images/youremailhasarrived.png[Check your email, width="780"]
+
+Check your email. Anynines will send an alert message to the email address you've entered. When you open it, you should see a message that looks something like this next picture.
+
+''''
+
+=== Introduction
+image:../../images/welcometoanynines.png[Introduction, width="780"]
+
+Anynines welcomes you aboard. Time to setup your credentials. Click the link in your email, then you'll see the following panel.
+
+
+''''
+
+
+=== Declare Your Password
+image:../../images/newpassword.png[Your credentials, width="780"]
+
+Here's where you can declare a password to be used together with your email address. Both email and password data are your credentials to administer your account.
+
+''''
+
+=== Fill In Both Fields 
+image:../../images/enteryournewpassword.png[Fill in both fields]
+
+Use the same password in both fields and then *SEND*. These entries must be identical, like upper and lowercase letters, numbers and funny characters :-D
+
+''''
+
+
+== Welcome Home !
+image:../../images/welcomehome.png[Welcome Home, width="780"]
+
+.Welcome Aboard ! 
+
+This is your control panel. You can log in here using your email address and password credentials. From this panel, you can set up secure network credentials, look up your billing information about your account, and learn how to use tools on a computer console that control your applications. When you're more familiar with our Anynines services, you might want to do that, but for now, we want to take you on a short-cut path to quickly deploy an application on our service.
+
+Don't worry about organizations or spaces until you've learned a bit more. We've set up your account with some typical values just to get started more quickly.
+
+.Download A Pre-built Application
+
+Your next step is to try our pre-built web application. To do that, visit the http://cloud9.de.a9sapp.eu/download[Download] menu option above.
+
+<<<
+
+== License
+
+....
+Copyright - www.anynines.com, 2014
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   	http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+....
+
+ 
