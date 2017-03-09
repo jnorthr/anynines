@@ -3,12 +3,10 @@ jdk:
 - oraclejdk8
 - oraclejdk7
 - openjdk7
-before_install:
-- chmod +x gradlew
+before_install: 
+- chmod +x gradlew 
 deploy:
-  edge:
-    source: travis-ci/dpl
-    branch: ps-fix-anynines-url
+  edge: true
   provider: anynines
   username: james.b.northrop@googlemail.com
   password:
