@@ -51,11 +51,13 @@ war {
 
 
 // closure for asciidoctor plugin; chg these values to influence asciidoctor task
+/*    
 asciidoctor {
 	sourceDir = file('src/docs/asciidoc')    //'src/docs/asciidoc')	// plugin reads all *.adoc files in this folder and any sub-folder
     outputDir = file('src/main/webapp')            //main/tester')   // file("$buildDir/docs")
     separateOutputDirs=false	// true creates two folders within the outDir path one for /html, one for /pdf
     backends = ['html5' ]	// to create both html and pdf output:  backends = ['html5' ,'pdf']
+    
     options = [
         doctype: 'book',
         attributes: [
@@ -65,7 +67,10 @@ asciidoctor {
         ]
     ]
 }
+*/
 
+/*
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.4'
+    gradleVersion = '6.5'
 }
+*/
