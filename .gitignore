@@ -1,5 +1,5 @@
-.git
 .gradle
 build/
 **/.DS_Store
+archive/
 .DS_Store

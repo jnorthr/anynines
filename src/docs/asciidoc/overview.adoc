@@ -7,29 +7,33 @@
 :docslink: http://anynines.de.a9sapp.eu/[anynines.com]
 :description: Anynines Home Page
 :doctitle: Cloud Foundry Overview
-:imagesdir: img
+:imagesdir: images
 
 TIP: This is a sample page for internal use only. It is not to be shown as part of this website. Not all images have been stored in /img folder.
 
 == https://docs.cloudfoundry.org/concepts/architecture/router.html[Router]
 
-image:router.svg[Traffic Router,100] Sends incoming traffic to the proper component. Mostly this is the Cloud Controller, or a currently running application on a DEA node.
+image:router.png[Traffic Router,100] Sends incoming traffic to the proper component. Mostly this is the Cloud Controller, or a currently running application on a DEA node.
 
 == https://docs.cloudfoundry.org/concepts/architecture/uaa.html[Credentials]
 
-image:credentials.svg[OAuth2 Manager,100] Our OAuth2 server together with our Login Server provide identity management.
+image:credentials.jpg[OAuth2 Manager,100] Our OAuth2 server together with our Login Server provide identity management.
 
 == https://docs.cloudfoundry.org/concepts/architecture/cloud-controller.html[Cloud Controller - V2]
 
-image:controller.svg[Controller,100] This component governs and manages an application's lifecycle.
+image:controller.jpg[Controller,100] This component governs and manages an application's lifecycle.
 
 == https://docs.cloudfoundry.org/concepts/architecture/#hm9k[HM9000 Health Manager]
 
 image:hm9000.svg[Health Manager,100] A component to monitor, evaluate and influence an application. It controls properties such as state changes, versioning and instance control. It guides the actions of the Cloud Controller to correct unusual situations.
 
+'''
+
 == https://docs.cloudfoundry.org/concepts/architecture/execution-agent.html[Droplet Execution Agent (*DEA*)]
 
-image:dea.svg[DEA,100] This component controls application lifecycle instances, either starting or ending states and may alert other components in the system with state messages.
+image:dea.png[DEA,100] This component controls application lifecycle instances, either starting or ending states and may alert other components in the system with state messages.
+
+'''
 
 == http://bosh.io/docs/reference/blobs.html[Blob Storage]
 
@@ -41,11 +45,11 @@ image:broker.svg[service Brokers,100] Components responsible for persistence ser
 
 == https://docs.cloudfoundry.org/concepts/architecture/messaging-nats.html[Message Bus]
 
-image:NATbus.svg[Messaging,100] An internal system messaging service, or bus, written in Ruby, offers message transfers between system componnts. The *NATS* publish-subscribe queueing technology is used here.
+image:controller.jpg[Messaging,100] An internal system messaging service, or bus, written in Ruby, offers message transfers between system componnts. The *NATS* publish-subscribe queueing technology is used here.
 
 == http://docs.cloudfoundry.org/loggregator/architecture.html[Statistics and Logging Mechanisms]
 
-image:logs.svg[Logging,100] This component harvests metric values from other system components. With these metrics, operators guide and control a Cloud Foundry instance.
+image:logs.jpg[Logging,100] This component harvests metric values from other system components. With these metrics, operators guide and control a Cloud Foundry instance.
 
 ''''
 

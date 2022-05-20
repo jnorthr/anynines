@@ -25,7 +25,7 @@
 buildscript {
   repositories {
     mavenLocal()
-    jcenter()
+    mavenCentral()
     maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
   }
 
@@ -36,7 +36,7 @@ buildscript {
 
 repositories {
   mavenLocal()
-  jcenter()
+  mavenCentral()
   maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local' }
 }
 
@@ -45,10 +45,9 @@ apply plugin: 'cloudfoundry'
 
 defaultTasks 'cfLogin','cfPush'  // 'cfDelete', 
 
-
 dependencies {
-    compile "org.codehaus.groovy:groovy-all:2.4.8"
-    runtime "redis.clients:jedis:2.7.2"
+    implementation "org.codehaus.groovy:groovy-all:3.0.8"
+    implementation "redis.clients:jedis:3.7.0"
 }
 
 war {
@@ -64,8 +63,8 @@ cloudfoundry {
     space = 'staging'
     
     organization = 'fred_googlemail_com'
-	file = new File('build/libs/Website.war')   // if you rename the root folder from Website then your .war filename must reflect that
-    uri = 'http://websitewar.de.a9sapp.eu/'       // if you choose another name for this site when deployed, put that new name here and in the application value below
+    file = new File('build/libs/Website.war') // if you rename the root folder from Website then your .war filename must reflect that
+    uri = 'http://websitewar.de.a9sapp.eu/' // if you choose another name for this site when deployed, put that new name here and in the application value below
 	application = 'Website.war'					// make this same as uri bit
     memory = 280	// MB - varys depending on vendor
     instances = 1

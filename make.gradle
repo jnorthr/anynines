@@ -1,0 +1,27 @@
+// https://asciidoctor.github.io/asciidoctor-gradle-plugin/  tells how this works
+
+plugins {
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+defaultTasks 'clean', 'asciidoctor'
+
+// To specify a custom output folder, use the outputDir method.
+asciidoctor {
+  sourceDir = file("$project.projectDir")
+  sources {
+    include 'Notes.adoc', 'Readme.adoc', './src/docs/asciidoc/overview.adoc'
+  }
+  outputDir = file("$project.projectDir")
+  
+  //backends = ['html5','pdf']  // if you don't want PDFs delete 'pdf'
+  
+  resources {
+      from("$project.projectDir/src/resources/images") { include "images/*.png" }
+      into "$project.projectDir/images"
+    }
+}

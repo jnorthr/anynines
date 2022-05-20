@@ -1,15 +1,4 @@
 language: groovy
 jdk:
-- oraclejdk8
-- oraclejdk7
-- openjdk7
-before_install: 
-- chmod +x gradlew 
-deploy:
-  edge: true
-  provider: anynines
-  username: james.b.northrop@googlemail.com
-  password:
-    secure: pAkZV7ANSlK25/w9rhXYDX6sN3vrBwTIvzuAa9HDwsHpl+5huNIhCzgwtoUa5DY2t6MdANb55cTtexVGFH+Czuc9EfLCvFdHxrYOCuPWc5iqoVWM0Mj4T3gLFVN9jUU/OS3mN+rvLiphniIpOa9kjcJ+QX9/o11pZSD+nCgBG1d+Nr4B6eEKUBXstUU/MKXbh9B/SQT5rawVcHJBlR2Y2VOv14Zl8R5Lc4QglvsijTVICHlqCWcQmOtQ63h8sAkSC4rURn3PaFnuvBfh4GJM0iTgmWhC5jiKLRXCB56FNseSoIKavDGJ17MwWcv+e7/lEyeSAbXhHTd4PZAwESBbu3PNFKA2bVdhMXJ4qImymOU97SKvYTf+ctqy0QaPjBTr9W+825LQilGqgShhy+fe0d7/UfknPAy1jLx24a9t8+JpiKXqUdwNthqFZPamxiU5bBDpSXYGutKuqDDNMcGl5bOp11mnN72d0EB96h4YEEFjTEqFF68FFqcje1s2oEHnYd8ohupLHNQFH4I/+27kyCH25psIbRZe9LPgOEc4LwcdxAUSsZlkNfT1IZ9NVCO9SzaAkSPsfC/tgM9lL5DTyn/2U2uVAobJpa6LgNT7FggsHYAPRy9eMDoMDoqqwJQWf6TPoBKSiyaX4YYHfF+gXzpAuAqj/MdvjuL7Ns6lIfo=
-  organization: james_b_northrop_googlemail_com
-  space: test
+  - oraclejdk7
+  - openjdk7
